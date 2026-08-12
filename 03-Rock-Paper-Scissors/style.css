@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.game {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: linear-gradient(135deg, #0f1724 0%, #192233 100%);
+  color: #eef2ff;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+  padding: 32px;
+}
+
+.game-header h1 {
+  font-size: 1.6rem;
+  letter-spacing: 0.6px;
+  margin-bottom: 6px;
+}
+
+.scoreboard {
+  display: flex;
+  gap: 16px;
+}
+.score {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 8px 14px;
+  border-radius: 8px;
+  min-width: 110px;
+  text-align: center;
+}
+
+.choices {
+  display: flex;
+  gap: 14px;
+}
+.choice {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.06);
+  color: #eef2ff;
+  cursor: pointer;
+  font-weight: 600;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+.choice:hover {
+  transform: translateY(-3px);
+}
+.choice:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.result {
+  text-align: center;
+  min-height: 48px;
+}
+.round-result {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.result.playing .round-result {
+  color: #c7d2fe;
+  animation: pulse 0.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+.computer-response {
+  color: #dbeafe;
+  opacity: 0.9;
+}
+
+.controls {
+  margin-top: 8px;
+}
+.reset-button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #475569;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .choices {
+    flex-direction: column;
+  }
+}

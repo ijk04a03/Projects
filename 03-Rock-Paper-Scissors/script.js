@@ -1,40 +1,101 @@
-function getComputerChoice() {
-    let arr1 = ["rock", "paper", "scissors"];
-    let i = Math.floor((Math.random()) * 3);
-    return arr1[i];
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const choices = ['rock', 'paper', 'scissors'];
+    let playerScore = 0;
+    let computerScore = 0;
 
+    const playerScoreEl = document.querySelector('.player-score');
+    const computerScoreEl = document.querySelector('.computer-score');
+    const roundResultEl = document.querySelector('.round-result');
+    const computerResponseEl = document.querySelector('.computer-response');
+    const choiceButtons = document.querySelectorAll('.choice');
+    const resetButton = document.querySelector('.reset-button');
+    let isPlaying = false;
 
-function getUserChoice() {
-    let userChoice = window.prompt("Choose between rock, paper, scissors : ");
-    return userChoice;
-}
+    choiceButtons.forEach(btn => btn.addEventListener('click', () => playRound(btn.dataset.choice)));
+    resetButton.addEventListener('click', resetGame);
 
-let humanScore = 0;
-let computerScore = 0;
-
-function playRound() {
-    let computerChoice = getComputerChoice();
-    let userChoice = getUserChoice()?.toLowerCase();
-    if (computerChoice == userChoice) {
-        console.log("This round is a tie");
-        console.log(`Scores are comp : ${computerScore} and user : ${humanScore}`);
-    } else if ((computerChoice == "rock" && userChoice == "scissors") ||
-        (computerChoice == "scissors" && userChoice == "paper") ||
-        (computerChoice == "paper" && userChoice == "rock")) {
-        computerScore++;
-        console.log("Computer won this round.");
-        console.log(`Scores are comp : ${computerScore} and user : ${humanScore}`);
-    } else {
-        if (userChoice == "rock" || userChoice == "paper" || userChoice == "scissors") {
-            humanScore++;
-            console.log("Human won this round.");
-            console.log(`Scores are comp : ${computerScore} and user : ${humanScore}`);
-        }
-        else console.log("invalid input from user");
+    function getComputerChoice() {
+        return choices[Math.floor(Math.random() * choices.length)];
     }
-}
 
-for (let i = 5; i > 0; i--) {
-    playRound();
-}
+    function playRound(playerChoice) {
+        if (isPlaying) return;
+
+        isPlaying = true;
+        disableChoiceButtons(true);
+        roundResultEl.textContent = 'Playing...';
+        roundResultEl.parentElement.classList.add('playing');
+        computerResponseEl.textContent = '';
+
+        setTimeout(() => {
+            const computerChoice = getComputerChoice();
+            const result = getRoundResult(playerChoice, computerChoice);
+
+            computerResponseEl.textContent = `Computer chose ${capitalize(computerChoice)}.`;
+            roundResultEl.textContent = result.message;
+            playerScore = result.playerScore;
+            computerScore = result.computerScore;
+            playerScoreEl.textContent = playerScore;
+            computerScoreEl.textContent = computerScore;
+            roundResultEl.parentElement.classList.remove('playing');
+            isPlaying = false;
+            disableChoiceButtons(false);
+            checkForMatchEnd();
+        }, 600);
+    }
+
+    function getRoundResult(playerChoice, computerChoice) {
+        if (playerChoice === computerChoice) {
+            return {
+                message: "It's a tie.",
+                playerScore,
+                computerScore,
+            };
+        }
+
+        const playerWins = (
+            (playerChoice === 'rock' && computerChoice === 'scissors') ||
+            (playerChoice === 'scissors' && computerChoice === 'paper') ||
+            (playerChoice === 'paper' && computerChoice === 'rock')
+        );
+
+        if (playerWins) {
+            return {
+                message: 'You win this round!',
+                playerScore: playerScore + 1,
+                computerScore,
+            };
+        }
+
+        return {
+            message: 'Computer wins this round.',
+            playerScore,
+            computerScore: computerScore + 1,
+        };
+    }
+
+    function disableChoiceButtons(disabled) {
+        choiceButtons.forEach(btn => btn.disabled = true);
+    }
+
+    function checkForMatchEnd() {
+        const winningScore = 5;
+        if (playerScore >= winningScore || computerScore >= winningScore) {
+            const winnerText = playerScore > computerScore ? 'You won the game!' : 'Computer won the game.';
+            roundResultEl.textContent = winnerText;
+            choiceButtons.forEach(b => b.disabled = true);
+        }
+    }
+
+    function resetGame() {
+        playerScore = 0; computerScore = 0;
+        isPlaying = false;
+        playerScoreEl.textContent = 0; computerScoreEl.textContent = 0;
+        roundResultEl.textContent = '';
+        computerResponseEl.textContent = '';
+        roundResultEl.parentElement.classList.remove('playing');
+        choiceButtons.forEach(b => b.disabled = false);
+    }
+
+    function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+});
