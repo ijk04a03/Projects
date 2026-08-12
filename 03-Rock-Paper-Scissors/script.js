@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const choiceButtons = document.querySelectorAll('.choice');
     const resetButton = document.querySelector('.reset-button');
     let isPlaying = false;
-
+    
     choiceButtons.forEach(btn => btn.addEventListener('click', () => playRound(btn.dataset.choice)));
     resetButton.addEventListener('click', resetGame);
 
