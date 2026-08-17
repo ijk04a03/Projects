@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Bitcount+Grid+Double:100,200,300,regular,500,600,700,800,900);
 
 * {
   padding: 0;
@@ -23,13 +24,15 @@
 }
 .calculator input {
   padding: 0 5px;
-  height: 60px;
+  height: 90px;
   background-color: white;
   color: #1c1e27;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 700;
   border: none;
+  border-radius: 8px;
   text-align: right;
+  font-family: "Bitcount Grid Double";
 }
 .calculator .row {
   display: flex;
@@ -38,9 +41,11 @@
 }
 
 .calculator .row button {
-  width: 60px;
-  height: 60px;
+  width: 90px;
+  height: 90px;
   border: none;
+  border-radius: 8px;
+  font-size: 22px;
 }
 
 .calculator .row button:hover,
