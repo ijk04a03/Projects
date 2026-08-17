@@ -15,6 +15,54 @@ const operations = {
     '÷': divide,
 };
 
+
+const keyMap = {
+    "0": "0",
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9",
+    "+": "+",
+    "-": "-",
+    "*": "×",
+    "/": "÷",
+    ".": "period",
+    "%": "percentage",
+    "Backspace": "backspace",
+    "Delete": "backspace",
+    "Escape": "reset",
+    "=": "equals",
+    "Enter": "equals",
+    "n": "plusminus",
+};
+
+document.addEventListener("keydown", (event) => {
+    const key = event.key;
+
+    // ignore repeated keydown from holding a key
+    if (event.repeat) return;
+
+    const buttonId = keyMap[key];
+    if (!buttonId) return;
+
+    const targetButton =
+        document.getElementById(buttonId) ||
+        Array.from(document.querySelectorAll("button")).find(
+            (button) => button.textContent.trim() === key
+        );
+
+    if (!targetButton) return;
+
+    event.preventDefault();
+    targetButton.click();
+});
+
+
 let first = '';
 let operator = null;
 let second = '';
@@ -166,3 +214,6 @@ buttons.forEach(button => {
         }
     })
 })
+
+
+
