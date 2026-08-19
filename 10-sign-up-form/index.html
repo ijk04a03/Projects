@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="img-cont">
+            <div class="overlay">
+                <img src="Tempitera.png" alt="Tempitera Logo">
+            </div>
+        </aside>
+        <main class="cont">
+            <header class="form-header">
+                <p>Login to Tempitera.in to get Exclusive Benefits like Personalised Iterinary and Weather updates in
+                    destinations</p>
+                <p>You know, you would need those eventually</p>
+            </header>
+            <form action="" method="post">
+                <fieldset class="fs">
+                    <legend id="form-legend">Fill the details to create account</legend>
+                    <div class="form-group">
+                        <label for="f-first-name">First Name</label>
+                        <input type="text" id="f-first-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="f-second-name">Second Name</label>
+                        <input type="text" id="f-second-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="f-email">Email</label>
+                        <input type="email" id="f-email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="f-mobile">Mobile Number</label>
+                        <div class="phone-field">
+                            <label class="sr-only" for="country-code">Country code</label>
+                            <select id="country-code" name="country-code" autocomplete="country">
+                                <option value="+91">+91</option>
+                                <option value="+1">+1</option>
+                                <option value="+44">+44</option>
+                                <option value="+61">+61</option>
+                            </select>
+                            <input type="tel" id="f-mobile" name="mobile" inputmode="numeric" autocomplete="tel"
+                                placeholder="98765 43210" minlength="7" maxlength="15" pattern="[0-9]{7,15}"
+                                title="Please enter 7 to 15 digits">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="f-password">Password</label>
+                        <input type="password" id="f-password" required minlength="8"
+                            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}"
+                            title="Password must be at least 8 characters and contain uppercase, lowercase, and a number">
+                    </div>
+                    <div class="form-group">
+                        <label for="f-conf-password">Confirm Password</label>
+                        <input type="password" id="f-conf-password" required minlength="8">
+                    </div>
+                </fieldset>
+                <button type="submit" id="submit-btn">Create Account</button>
+            </form>
+            <div id="switch"><span id="switch-text"></span> <a href="" id="switch-link"></a></div>
+        </main>
+    </div>
+</body>
+
+</html>
