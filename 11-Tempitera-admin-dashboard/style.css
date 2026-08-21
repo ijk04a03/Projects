@@ -32,6 +32,7 @@
     fill 0.2s ease,
     transform 0.2s ease,
     box-shadow 0.2s ease;
+  color: var(--text);
 }
 
 body {
@@ -46,7 +47,7 @@ body {
   grid-row: 1/-1;
   height: 100vh;
   max-height: 100vh;
-  position: sticky;
+  position: fixed;
   top: 0;
   overflow: hidden;
   display: grid;
@@ -71,6 +72,7 @@ body {
   width: 100%;
   margin-bottom: 1.5rem;
   gap: 10px;
+  font-size: 1.5rem;
 }
 
 .sidebar-toggle {
@@ -79,7 +81,7 @@ body {
   background: var(--panel);
   width: 42px;
   height: 42px;
-  padding: 8px 7px;
+  padding: 2px 5px 0px 5px;
   cursor: pointer;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(23, 32, 51, 0.08);
@@ -193,6 +195,10 @@ body {
   border-color: rgba(31, 91, 214, 0.3);
 }
 
+.profile-button {
+  display: flex;
+  flex-direction: row;
+}
 .profile-button-img {
   width: 42px;
   height: 42px;
@@ -200,6 +206,7 @@ body {
   object-fit: cover;
   margin-right: 10px;
   border: 2px solid rgba(31, 91, 214, 0.15);
+  display: inline;
 }
 
 .header-top-text {
@@ -394,9 +401,10 @@ body {
 
   .page-link-logo {
     justify-content: center;
-    width: calc(100% - 8px);
+    width: calc(100%);
     margin-left: 4px;
     padding: 12px 6px;
+    margin-right: 0;
   }
 
   .page-link-logo svg {
