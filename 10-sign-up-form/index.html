@@ -18,18 +18,19 @@
         </aside>
         <main class="cont">
             <header class="form-header">
-                <p>Login to Tempitera.in to get Exclusive Benefits like Personalised Iterinary and Weather updates in
+                <p>Login / Sign-up to Tempitera.in to get Exclusive Benefits like Personalised Iterinary and Weather
+                    updates in
                     destinations</p>
                 <p>You know, you would need those eventually</p>
             </header>
             <form action="" method="post">
                 <fieldset class="fs">
                     <legend id="form-legend">Fill the details to create account</legend>
-                    <div class="form-group">
+                    <div class="form-group sign-up-only">
                         <label for="f-first-name">First Name</label>
                         <input type="text" id="f-first-name">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group sign-up-only">
                         <label for="f-second-name">Second Name</label>
                         <input type="text" id="f-second-name">
                     </div>
@@ -37,7 +38,7 @@
                         <label for="f-email">Email</label>
                         <input type="email" id="f-email" placeholder="your@email.com">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group sign-up-only">
                         <label for="f-mobile">Mobile Number</label>
                         <div class="phone-field">
                             <label class="sr-only" for="country-code">Country code</label>
@@ -58,14 +59,15 @@
                             pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}"
                             title="Password must be at least 8 characters and contain uppercase, lowercase, and a number">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group sign-up-only">
                         <label for="f-conf-password">Confirm Password</label>
                         <input type="password" id="f-conf-password" required minlength="8">
                     </div>
                 </fieldset>
                 <button type="submit" id="submit-btn">Create Account</button>
             </form>
-            <div id="switch"><span id="switch-text"></span> <a href="" id="switch-link"></a></div>
+            <div id="switch"><span id="switch-text">Already have an account?</span> <a href=""
+                    onclick="SwitchPage(event)" id="switch-link">Sign in</a></div>
         </main>
     </div>
 </body>
