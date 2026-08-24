@@ -156,10 +156,18 @@ body {
 
 .header-top {
   display: grid;
-  grid-template-columns: auto minmax(180px, 1fr) auto auto;
+  grid-template-columns: minmax(0, 1fr) auto auto;
   align-items: center;
   gap: 18px;
   padding: 12px 8px 10px;
+}
+
+.search-field {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  min-width: 0;
+  gap: 10px;
 }
 
 .header-top-button {
@@ -178,8 +186,8 @@ body {
 }
 
 #search-box {
-  min-width: 180px;
-  max-width: 780px;
+  width: min(100%, 780px);
+  min-width: 0;
   height: 40px;
   border: 1px solid var(--border);
   border-radius: 999px;
@@ -513,12 +521,12 @@ body {
   }
 
   .header-top {
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
   }
 
-  #search-box {
+  .search-field {
     grid-column: 1 / -1;
-    max-width: none;
+    padding-right: 52px;
   }
 
   .header-bottom {
