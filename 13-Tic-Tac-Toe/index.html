@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <input class="theme-toggle" type="checkbox" id="theme-toggle" aria-label="Use dark theme">
+    <div class="page-shell">
+        <header class="topbar">
+            <a class="brand" href="./">Tic<span>-Tac-Toe</span></a>
+            <label class="theme-switch" for="theme-toggle">
+                <span class="theme-icon" aria-hidden="true">☼</span>
+                <span>Dark mode</span>
+                <span class="switch-track" aria-hidden="true"><span></span></span>
+            </label>
+        </header>
+
+        <main class="game-layout">
+            <section class="intro" aria-labelledby="game-title">
+                <p class="eyebrow">Two players · One board</p>
+                <h1 id="game-title">Make your move.</h1>
+                <p class="intro-copy">Take turns placing your mark. The first player to claim three squares in a row
+                    wins.</p>
+
+                <form class="player-form">
+                    <div class="form-heading">
+                        <span>Players</span>
+                        <span class="step-count">01 / 02</span>
+                    </div>
+                    <label class="player-field player-one">
+                        <span class="marker marker-o">O</span>
+                        <span class="field-content">
+                            <span class="field-label">Player one</span>
+                            <input type="text" name="player-one" placeholder="Enter a name" autocomplete="off">
+                        </span>
+                    </label>
+                    <label class="player-field player-two">
+                        <span class="marker marker-x">X</span>
+                        <span class="field-content">
+                            <span class="field-label">Player two</span>
+                            <input type="text" name="player-two" placeholder="Enter a name" autocomplete="off">
+                        </span>
+                    </label>
+                    <button class="start-button" type="submit">Start game <span aria-hidden="true">↗</span></button>
+                </form>
+            </section>
+
+            <section class="play-area" aria-label="Tic-Tac-Toe board">
+                <div class="game-status">
+                    <div>
+                        <p class="status-label">Current turn</p>
+                        <p class="status-value">Player one</p>
+                    </div>
+                    <span class="turn-marker marker-o">O</span>
+                </div>
+                <div class="container" role="grid" aria-label="Game board">
+                    <button class="cell" type="button" role="gridcell" aria-label="Cell 1" data-cell="1"></button>
+                    <button class="cell" type="button" role="gridcell" aria-label="Cell 2" data-cell="2"></button>
+                    <button class="cell" type="button" role="gridcell" aria-label="Cell 3" data-cell="3"></button>
+                    <button class="cell" type="button" role="gridcell" aria-label="Cell 4" data-cell="4"></button>
+                    <button class="cell" type="button" role="gridcell" aria-label="Cell 5" data-cell="5"></button>
+                    <button class="cell" type="button" role="gridcell" aria-label="Cell 6" data-cell="6"></button>
+                    <button class="cell" type="button" role="gridcell" aria-label="Cell 7" data-cell="7"></button>
+                    <button class="cell" type="button" role="gridcell" aria-label="Cell 8" data-cell="8"></button>
+                    <button class="cell" type="button" role="gridcell" aria-label="Cell 9" data-cell="9"></button>
+                </div>
+                <p class="result-message" aria-live="polite">Waiting for players to start</p>
+            </section>
+        </main>
+
+        <footer class="footer-note">Good games are built one move at a time.</footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,379 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
+
+:root {
+  --paper: #f5f3ee;
+  --surface: #fffefa;
+  --ink: #202321;
+  --muted: #777b73;
+  --line: #d9d9d0;
+  --accent: #ef704f;
+  --accent-soft: #f8ddd3;
+  --shadow: 0 20px 50px rgba(42, 43, 35, 0.08);
+}
+
+body:has(.theme-toggle:checked) {
+  --paper: #1c201f;
+  --surface: #282e2b;
+  --ink: #f1eee5;
+  --muted: #a8afa8;
+  --line: #48504a;
+  --accent: #ff9373;
+  --accent-soft: #5a3831;
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  border: 2px solid gray;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid gray;
+  width: 90px;
+  height: 90px;
+  font-size: 48px;
+  color: grey;
+  font-family:
+    "Roboto Mono",
+    Roboto,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  display: block;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Manrope, sans-serif;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.theme-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.page-shell {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  color: var(--ink);
+  font-family: Manrope, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+}
+.brand span,
+.eyebrow,
+.theme-icon {
+  color: var(--accent);
+}
+.theme-switch {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--muted);
+  cursor: pointer;
+  font:
+    700 11px Manrope,
+    sans-serif;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.theme-icon {
+  font-size: 17px;
+  line-height: 1;
+}
+.switch-track {
+  display: flex;
+  align-items: center;
+  width: 35px;
+  height: 20px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+}
+.switch-track span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  transition: transform 180ms ease;
+}
+.theme-toggle:checked + .page-shell .switch-track span {
+  transform: translateX(14px);
+}
+.game-layout {
+  display: grid;
+  grid-template-columns: minmax(270px, 0.8fr) minmax(420px, 1.2fr);
+  gap: clamp(50px, 9vw, 125px);
+  align-items: center;
+  padding: 82px 0 65px;
+}
+.eyebrow,
+.status-label,
+.field-label,
+.form-heading,
+.step-count {
+  font:
+    800 11px Manrope,
+    sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.eyebrow {
+  margin-bottom: 18px;
+}
+h1 {
+  max-width: 360px;
+  font:
+    800 clamp(42px, 6vw, 70px) Manrope,
+    sans-serif;
+  line-height: 0.98;
+  letter-spacing: -0.07em;
+}
+.intro-copy {
+  max-width: 330px;
+  margin: 24px 0 48px;
+  color: var(--muted);
+  font:
+    15px/1.7 Manrope,
+    sans-serif;
+}
+.player-form {
+  max-width: 360px;
+}
+.form-heading {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.step-count {
+  color: var(--muted);
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+}
+.player-field {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  cursor: text;
+}
+.marker,
+.turn-marker {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font:
+    500 14px "Roboto Mono",
+    monospace;
+}
+.marker-o {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.marker-x {
+  background: var(--ink);
+  color: var(--paper);
+}
+.field-content {
+  display: grid;
+  gap: 5px;
+  width: 100%;
+}
+.field-label,
+.status-label {
+  color: var(--muted);
+  font-size: 9px;
+}
+.player-field input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink);
+  font:
+    600 15px Manrope,
+    sans-serif;
+}
+.player-field input::placeholder {
+  color: var(--muted);
+  font-weight: 500;
+}
+.player-field:focus-within {
+  border-color: var(--accent);
+}
+.start-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 27px;
+  padding: 16px 18px;
+  border: 0;
+  border-radius: 3px;
+  background: var(--accent);
+  color: #fffefa;
+  cursor: pointer;
+  font:
+    800 12px Manrope,
+    sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.start-button span {
+  font-size: 20px;
+  line-height: 0;
+}
+.start-button:hover {
+  filter: brightness(1.08);
+}
+.play-area {
+  width: min(100%, 560px);
+  justify-self: end;
+}
+.game-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+.status-value {
+  margin-top: 5px;
+  font:
+    800 16px Manrope,
+    sans-serif;
+}
+.turn-marker {
+  width: 42px;
+  height: 42px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  aspect-ratio: 1;
+  gap: 10px;
+  padding: 10px;
+  min-height: 0;
+  border: 1px solid var(--line);
+  background: var(--line);
+  box-shadow: var(--shadow);
+}
+.cell {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  min-height: 0;
+  width: auto;
+  height: auto;
+  border: 0;
+  background: var(--surface);
+  color: var(--accent);
+  cursor: pointer;
+  font:
+    500 clamp(40px, 8vw, 76px) "Roboto Mono",
+    monospace;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease,
+    transform 150ms ease;
+}
+.cell:hover {
+  background: var(--accent-soft);
+  transform: scale(0.98);
+}
+.cell:focus-visible,
+.start-button:focus-visible,
+.theme-switch:focus-within {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+.result-message {
+  min-height: 20px;
+  margin-top: 18px;
+  color: var(--muted);
+  font:
+    600 12px Manrope,
+    sans-serif;
+  text-align: right;
+}
+.result-message.is-final {
+  color: var(--accent);
+  font-weight: 800;
+}
+.result-message.is-error {
+  color: #b84d3a;
+}
+.footer-note {
+  padding: 20px 0 28px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font:
+    11px "Roboto Mono",
+    monospace;
+}
+
+@media (max-width: 760px) {
+  .page-shell {
+    width: min(100% - 32px, 560px);
+  }
+  .game-layout {
+    grid-template-columns: 1fr;
+    gap: 58px;
+    padding: 58px 0 48px;
+  }
+  .play-area {
+    justify-self: stretch;
+  }
+  .intro-copy {
+    margin-bottom: 35px;
+  }
+}
