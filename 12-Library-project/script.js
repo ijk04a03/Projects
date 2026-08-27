@@ -17,22 +17,21 @@ addBook.addEventListener("click", (e) => {
 
 const myLibrary = [];
 
-function Book(name, author, pagecount, readStatus) {
-    if (!new.target) {
-        throw Error("You must use the 'new' operator to call the constructor");
-    }
-    this.name = name;
-    this.author = author;
-    this.pages = pagecount;
-    this.readStatus = readStatus;
+class Book {
+    constructor(name, author, pagecount, readStatus) {
+        this.name = name;
+        this.author = author;
+        this.pages = pagecount;
+        this.readStatus = readStatus;
 
-    this.info = function () {
-        return `${this.name}, by ${this.author}, ${this.pages}, ${this.readStatus ? "Completed reading" : "Not read yet"}`;
+        this.info = function () {
+            return `${this.name}, by ${this.author}, ${this.pages}, ${this.readStatus ? "Completed reading" : "Not read yet"}`;
+        }
     }
+    changeReadStatus = function () {
+        this.readStatus = !this.readStatus;
+    };
 }
-Book.prototype.changeReadStatus = function () {
-    this.readStatus = !this.readStatus;
-};
 
 addBookToLibrary = function (Book) {
     myLibrary.push(Book);
@@ -99,8 +98,6 @@ const theCatcherInTheRye = new Book("The Catcher in the Rye", "J.D. Salinger", "
 const theMartian = new Book("The Martian", "Andy Weir", "369 Pages", false);
 const endersGame = new Book("Ender's Game", "Orson Scott Card", "352 Pages", true);
 const theLeftHandOfDarkness = new Book("The Left Hand of Darkness", "Ursula K. Le Guin", "304 Pages", false);
-
-
 
 addBookToLibrary(theHobbit);
 addBookToLibrary(nineteenEightyFour);
