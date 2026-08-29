@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>TO-DO List</h1>
+
+        <div class="btn-cont">
+
+            <div>
+                <button type="button" id="open-current" class="active">
+                    Current List
+                </button>
+
+                <button type="button" id="open-completed">
+                    Completed List
+                </button>
+            </div>
+
+            <button type="button" id="clear-list">
+                Clear Current List
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <div class="main-wrapper">
+
+        <!-- FORM SECTION -->
+
+        <div class="form">
+
+            <form action="" method="get">
+
+                <!-- Title & Description in 2 columns -->
+
+                <div class="form-row">
+
+                    <div class="form-field">
+
+                        <label for="title" class="required">
+                            Title
+                        </label>
+
+                        <input type="text" name="title" id="title" required>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="description" class="required">
+                            Description
+                        </label>
+
+                        <input type="text" name="description" id="description" required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Date & Priority in 2 columns -->
+
+                <div class="form-row">
+
+                    <div class="form-field">
+
+                        <label for="duedate" class="required">
+                            Due Date
+                        </label>
+
+                        <input type="date" name="duedate" id="duedate" required>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="priority" class="required">
+                            Priority
+                        </label>
+
+                        <select name="priority" id="priority" required>
+
+                            <option value="High">
+                                High
+                            </option>
+
+                            <option value="Medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="Low">
+                                Low
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Checklist Section -->
+
+                <div class="form-field form-row full">
+
+                    <label for="checklist">
+                        Checklist
+                    </label>
+
+                    <input type="text" name="checklist-item" id="checklist">
+
+                </div>
+
+                <button type="button" id="add-checklist-item">
+                    Add Item
+                </button>
+
+                <div class="checklist"></div>
+
+
+                <!-- Notes Section -->
+
+                <div class="form-field form-row full">
+
+                    <label for="notes">
+                        Notes
+                    </label>
+
+                    <input type="text" name="notes-item" id="notes">
+
+                </div>
+
+                <button type="button" id="add-note-item">
+                    Add Note
+                </button>
+
+                <div class="notes">
+
+                    <ul class="notes-cont"></ul>
+
+                </div>
+
+
+                <!-- Submit & Reset Buttons -->
+
+                <div class="form-actions">
+
+                    <button type="submit" id="form-submit">
+                        Add Todo
+                    </button>
+
+                    <button type="reset" id="form-reset">
+                        Reset
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <!-- CONTAINERS SECTION -->
+
+        <div>
+
+            <div class="container current active"></div>
+
+            <div class="container past"></div>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <strong>
+            <span>Beware!</span>
+            Clicking this button will reset the entire data:
+        </strong>
+
+        <button type="button" id="full-reset">
+            Reset Entire List
+        </button>
+
+    </footer>
+
+</body>
+
+</html>
