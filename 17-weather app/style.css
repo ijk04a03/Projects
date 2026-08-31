@@ -1,0 +1,151 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #dff6ff, #f5fbff);
+  color: #222;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+/* Search form */
+form {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  flex: 1;
+  padding: 11px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+/* Buttons */
+button {
+  padding: 11px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+}
+
+/* Weather card */
+.weather {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 30px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Unit button */
+.weather > button {
+  margin-bottom: 20px;
+}
+
+/* Unit text */
+#Unit {
+  margin-left: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Weather table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  width: 40%;
+  background-color: #f5f7f9;
+  color: #444;
+}
+
+td {
+  color: #222;
+}
+
+tr:last-child th,
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  body {
+    padding: 25px 15px;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  input,
+  form button {
+    width: 100%;
+  }
+
+  .weather {
+    padding: 20px;
+  }
+
+  th,
+  td {
+    padding: 12px;
+  }
+}
