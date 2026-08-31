@@ -17,20 +17,31 @@
     const img = document.querySelector("#giffy-gif");
     const btn = document.querySelector("#change-gif");
     let i = 0;
-    function getRandomCatGif() {
-        fetch(`https://api.giphy.com/v1/gifs/random?api_key=tlr85DMT12a01LY4OWGILikWwjARCwys&q=cat`)
-            .then(function (response) {
-                return response.json()
-            })
-            .then(function (aboveThensReturn) {
-                const gifs = aboveThensReturn.data;
-                // const randomIndex = Math.floor(Math.random() * gifs.length);
-                // console.log(gifs);
-                // console.log(gifs[randomIndex]);
-                img.src = gifs.images.original.url;
-            })
-            .catch(error => console.error("Image fetch failed", error))
+
+    async function getRandomCatGif() {
+        try {
+            let response = await fetch('https://api.giphy.com/v1/gifs/random?api_key=tlr85DMT12a01LY4OWGILikWwjARCwys&q=cat');
+            const data = await response.json();
+            img.src = data.data.images.original.url;
+        } catch (error) {
+            console.error("Image fetch failed", error);
+        }
     }
+
+    // function getRandomCatGif() {
+    //     fetch(`https://api.giphy.com/v1/gifs/random?api_key=tlr85DMT12a01LY4OWGILikWwjARCwys&q=cat`)
+    //         .then(function (response) {
+    //             return response.json()
+    //         })
+    //         .then(function (aboveThensReturn) {
+    //             const gifs = aboveThensReturn.data;
+    //             // const randomIndex = Math.floor(Math.random() * gifs.length);
+    //             // console.log(gifs);
+    //             // console.log(gifs[randomIndex]);
+    //             img.src = gifs.images.original.url;
+    //         })
+    //         .catch(error => console.error("Image fetch failed", error))
+    // }
     getRandomCatGif();
     btn.addEventListener('click', () => getRandomCatGif());
 
