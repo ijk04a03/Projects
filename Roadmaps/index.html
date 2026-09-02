@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Build Trails — DSA, Advanced DSA & Projects</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress-rail">
+  <div class="progress-rail-fill" id="globalProgressFill"></div>
+</div>
+
+<div class="app">
+
+  <!-- ===================== SIDEBAR TRAIL ===================== -->
+  <aside class="trail" id="trail">
+    <div class="trail-head">
+      <div class="trail-logo" id="trailLogo">🧭 Build Trail</div>
+      <div class="trail-sub" id="trailSub">Pick a track</div>
+      <div class="trail-progress-label">
+        <span id="globalProgressText">0 / 0 checkpoints</span>
+      </div>
+    </div>
+
+    <div class="tab-switcher" id="tabSwitcher"><!-- filled by JS --></div>
+
+    <nav class="trail-nav" id="trailNav"><!-- filled by JS --></nav>
+    <div class="trail-foot">
+      <button id="resetBtn" class="ghost-btn">Reset this track's progress</button>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN ===================== -->
+  <main class="main">
+
+    <header class="hero" id="hero"><!-- filled by JS --></header>
+
+    <div id="camps"><!-- filled by JS from active tab's DATA --></div>
+
+    <footer class="site-footer">
+      <p>Built as a personal roadmap · Keep this tab open, work top to bottom · You've got this 🌿</p>
+    </footer>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
