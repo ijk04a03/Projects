@@ -44,25 +44,23 @@ class HashMap {
 
 
     get(key) {
-        for (let bucket of this.buckets) {
-            let current = bucket;
-            while (current) {
-                if (current.key === key) return current.value;
-                current = current.next;
-            }
+        const index = this.hash(key);
+        let current = this.buckets[index];
+        while (current) {
+            if (current.key === key) return current.value;
+            current = current.next;
         }
         return null;
     }
 
     has(key) {
-        for (let bucket of this.buckets) {
-            let current = bucket;
-            while (current) {
-                if (current.key === key) return true;
-                current = current.next;
-            }
+        const index = this.hash(key);
+        let current = this.buckets[index];
+        while (current) {
+            if (current.key === key) return true;
+            current = current.next;
         }
-        return null;
+        return false;
     }
 
     length() {
@@ -70,16 +68,15 @@ class HashMap {
     }
 
     clear() {
-        for (let bucket of this.buckets) {
-            bucket = null;
-        }
+        this.buckets.fill(null);
+        this.sizeOfHM = 0;
     }
     keys() {
         let arr = new Array;
         for (let bucket of this.buckets) {
             let current = bucket;
             while (current) {
-                if (current.key) arr.push(current.key);
+                arr.push(current.key);
                 current = current.next;
             }
         }
@@ -91,7 +88,7 @@ class HashMap {
         for (let bucket of this.buckets) {
             let current = bucket;
             while (current) {
-                if (current.key) arr.push(current.value);
+                arr.push(current.value);
                 current = current.next;
             }
         }
@@ -103,7 +100,7 @@ class HashMap {
         for (let bucket of this.buckets) {
             let current = bucket;
             while (current) {
-                if (current.key) arr.push([this.hash(current.key), current.key, current.value]);
+                arr.push([this.hash(current.key), current.key, current.value]);
                 current = current.next;
             }
         }

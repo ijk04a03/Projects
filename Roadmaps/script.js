@@ -1,9 +1,10 @@
 /* =========================================================================
    BUILD TRAILS — multi-tab data + interactivity
-   Three tracks, each with its own progress saved separately:
+   Four tracks, each with its own progress saved separately:
      1) DSA + C++ (60 Days)
      2) DSA — Advanced / Rarely Used
      3) Projects (Speed Reading Helper → Typing Tutor → Tempitera)
+     4) Spiritual (Devanagari ⇄ Telugu script toggle)
    Edit any DATA array below to add/change/reorder checkpoints.
    ========================================================================= */
 
@@ -37,7 +38,6 @@ function badgeHtml(type) {
     const b = BADGE_TYPES[type] || BADGE_TYPES.concept;
     return `<span class="badge" style="--badge-color:${b.color}">${b.label}</span>`;
 }
-
 /* =========================================================================
    TAB 1 — DSA + C++ (60 Days)
    ========================================================================= */
@@ -220,8 +220,7 @@ const DATA_DSA = [
     title: "Dynamic Programming — 2D",
     subtitle: "Grid DP and DP across two strings — the interview favorites.",
     items: [
-      { type: "concept", text: "Set up the 2D table, get the base row/column right, and practice reading the recurrence off a small example by hand before coding." },
-      { type: "problem", text: "LeetCode 62 — Unique Paths (Medium)" },
+      { type: "concept", text: "Set up the 2D table, get the base row/column right, and practice reading the recurrence off a small example by hand before coding." },      { type: "problem", text: "LeetCode 62 — Unique Paths (Medium)" },
       { type: "problem", text: "LeetCode 64 — Minimum Path Sum (Medium)" },
       { type: "problem", text: "LeetCode 1143 — Longest Common Subsequence (Medium)" },
       { type: "problem", text: "LeetCode 72 — Edit Distance (Medium)" },
@@ -404,7 +403,6 @@ const DATA_PROJECTS = [
       { type: "stretch", text: "Support user-pasted text — not just Gutenberg books, so it works as a general read-faster tool." },
     ],
   },
-
   /* ---------------- PROJECT 2: Typing Tutor ---------------- */
   {
     id: "proj-b1", phaseLabel: "Project 2 · MVP",
@@ -497,222 +495,361 @@ const DATA_PROJECTS = [
 ];
 
 /* =========================================================================
-   TAB CONFIG
+   TAB 4 — Spiritual (Devanagari ⇄ Telugu script toggle)
+   Same mantras, same pronunciation — only the script changes.
    ========================================================================= */
-const TABS = [
+const DATA_SPIRITUAL = [
   {
-    id: "dsa",
-    navLabel: "DSA + C++",
-    icon: "🧮",
-    storageKey: "dsa-60-day-v1",
-    data: DATA_DSA,
-    hero: {
-      eyebrow: "Track 1 · 60 Days",
-      title: "DSA + C++ — Beginner to Interview-Ready",
-      lede: "You know C++ syntax but haven't really done DSA yet — so this starts from complexity analysis and the STL, and moves pattern by pattern through everything a junior-role interview will realistically ask. Each camp below is a <em>pattern</em> — finish every checkpoint in it and it's marked complete on the trail.",
-    },
+    id: "sp-dakshinamurthy",
+    titleEn: "Sri Dakshinamurthy Stotram",
+    subEn: "Adi Shankaracharya — 10 verses",
+    devanagari:
+`विश्वं दर्पणदृश्यमाननगरीतुल्यं निजान्तर्गतं
+पश्यन्नात्मनि मायया बहिरिवोद्भूतं यथा निद्रया ।
+यः साक्षात्कुरुते प्रबोधसमये स्वात्मानमेवाद्वयं
+तस्मै श्रीगुरुमूर्तये नम इदं श्रीदक्षिणामूर्तये ॥ १ ॥
+
+बीजस्यान्तरिवाङ्कुरो जगदिदं प्राङ्निर्विकल्पं पुनः
+मायाकल्पितदेशकालकलनावैचित्र्यचित्रीकृतम् ।
+मायावीव विजृम्भयत्यपि महायोगीव यः स्वेच्छया
+तस्मै श्रीगुरुमूर्तये नम इदं श्रीदक्षिणामूर्तये ॥ २ ॥
+
+यस्यैव स्फुरणं सदात्मकमसत्कल्पार्थकं भासते
+साक्षात्तत्त्वमसीति वेदवचसा यो बोधयत्याश्रितान् ।
+यत्साक्षात्करणाद्भवेन्न पुनरावृत्तिर्भवाम्भोनिधौ
+तस्मै श्रीगुरुमूर्तये नम इदं श्रीदक्षिणामूर्तये ॥ ३ ॥
+
+नानाच्छिद्रघटोदरस्थितमहादीपप्रभाभास्वरं
+ज्ञानं यस्य तु चक्षुरादिकरणद्वारा बहिः स्पन्दते ।
+जानामीति तमेव भान्तमनुभात्येतत्समस्तं जगत्
+तस्मै श्रीगुरुमूर्तये नम इदं श्रीदक्षिणामूर्तये ॥ ४ ॥
+
+देहं प्राणमपीन्द्रियाण्यपि चलां बुद्धिं च शून्यं विदुः
+स्त्रीबालान्धजडोपमास्त्वहमिति भ्रान्ता भृशं वादिनः ।
+मायाशक्तिविलासकल्पितमहाव्यामोहसंहारिणे
+तस्मै श्रीगुरुमूर्तये नम इदं श्रीदक्षिणामूर्तये ॥ ५ ॥
+
+राहुग्रस्तदिवाकरेन्दुसदृशो मायासमाच्छादनात्
+सन्मात्रः करणोपसंहरणतो योऽभूत्सुषुप्तः पुमान् ।
+प्रागस्वाप्समिति प्रबोधसमये यः प्रत्यभिज्ञायते
+तस्मै श्रीगुरुमूर्तये नम इदं श्रीदक्षिणामूर्तये ॥ ६ ॥
+
+बाल्यादिष्वपि जाग्रदादिषु तथा सर्वास्ववस्थास्वपि
+व्यावृत्तास्वनुवर्तमानमहमित्यन्तः स्फुरन्तं सदा ।
+स्वात्मानं प्रकटीकरोति भजतां यो मुद्रया भद्रया
+तस्मै श्रीगुरुमूर्तये नम इदं श्रीदक्षिणामूर्तये ॥ ७ ॥
+
+विश्वं पश्यति कार्यकारणतया स्वस्वामिसम्बन्धतः
+शिष्याचार्यतया तथैव पितृपुत्राद्यात्मना भेदतः ।
+स्वप्ने जाग्रति वा य एष पुरुषो मायापरिभ्रामितः
+तस्मै श्रीगुरुमूर्तये नम इदं श्रीदक्षिणामूर्तये ॥ ८ ॥
+
+भूरम्भांस्यनलोऽनिलोऽम्बरमहर्नाथो हिमांशुः पुमान्
+इत्याभाति चराचरात्मकमिदं यस्यैव मूर्त्यष्टकम् ।
+नान्यत्किञ्चन विद्यते विमृशतां यस्मात्परस्माद्विभोः
+तस्मै श्रीगुरुमूर्तये नम इदं श्रीदक्षिणामूर्तये ॥ ९ ॥
+
+सर्वात्मत्वमिति स्फुटीकृतमिदं यस्मादमुष्मिन् स्तवे
+तेनास्य श्रवणात्तदर्थमननाद्ध्यानाच्च सङ्कीर्तनात् ।
+सर्वात्मत्वमहाविभूतिसहितं स्यादीश्वरत्वं स्वतः
+सिद्ध्येत्तत्पुनरष्टधा परिणतं चैश्वर्यमव्याहतम् ॥ १० ॥`,
+    telugu:
+`విశ్వం దర్పణదృశ్యమాననగరీ తుల్యం నిజాంతర్గతం
+పశ్యన్నాత్మని మాయయా బహిరివోద్భూతం యథా నిద్రయా ।
+యః సాక్షాత్కురుతే ప్రబోధసమయే స్వాత్మానమేవాద్వయం
+తస్మై శ్రీగురుమూర్తయే నమ ఇదం శ్రీదక్షిణామూర్తయే ॥ ౧ ॥
+
+బీజస్యాంతరివాంకురో జగదిదం ప్రాఙ్నిర్వికల్పం పునః
+మాయాకల్పితదేశకాలకలనావైచిత్ర్యచిత్రీకృతమ్ ।
+మాయావీవ విజృంభయత్యపి మహాయోగీవ యః స్వేచ్ఛయా
+తస్మై శ్రీగురుమూర్తయే నమ ఇదం శ్రీదక్షిణామూర్తయే ॥ ౨ ॥
+
+యస్యైవ స్ఫురణం సదాత్మకమసత్కల్పార్థకం భాసతే
+సాక్షాత్తత్త్వమసీతి వేదవచసా యో బోధయత్యాశ్రితాన్ ।
+యత్సాక్షాత్కరణాద్భవేన్న పురనావృత్తిర్భవాంభోనిధౌ
+తస్మై శ్రీగురుమూర్తయే నమ ఇదం శ్రీదక్షిణామూర్తయే ॥ ౩ ॥
+
+నానాచ్ఛిద్రఘటోదరస్థితమహాదీపప్రభాభాస్వరం
+జ్ఞానం యస్య తు చక్షురాదికరణద్వారా బహిః స్పందతే ।
+జానామీతి తమేవ భాంతమనుభాత్యేతత్సమస్తం జగత్
+తస్మై శ్రీగురుమూర్తయే నమ ఇదం శ్రీదక్షిణామూర్తయే ॥ ౪ ॥
+
+దేహం ప్రాణమపీంద్రియాణ్యపి చలాం బుద్ధిం చ శూన్యం విదుః
+స్త్రీబాలాంధజడోపమాస్త్వహమితి భ్రాంతాభృశం వాదినః ।
+మాయాశక్తివిలాసకల్పితమహావ్యామోహసంహారిణే
+తస్మై శ్రీగురుమూర్తయే నమ ఇదం శ్రీదక్షిణామూర్తయే ॥ ౫ ॥
+
+రాహుగ్రస్తదివాకరేందుసదృశో మాయా సమాచ్ఛాదనాత్
+సన్మాత్రః కరణోపసంహరణతో యోఽభూత్సుషుప్తః పుమాన్ ।
+ప్రాగస్వాప్సమితి ప్రబోధసమయే యః ప్రత్యభిజ్ఞాయతే
+తస్మై శ్రీగురుమూర్తయే నమ ఇదం శ్రీదక్షిణామూర్తయే ॥ ౬ ॥
+
+బాల్యాదిష్వపి జాగ్రదాదిషు తథా సర్వాస్వవస్థాస్వపి
+వ్యావృత్తాస్వనువర్తమానమహమిత్యంతః స్ఫురంతం సదా ।
+స్వాత్మానం ప్రకటీకరోతి భజతాం యో ముద్రయా భద్రయా
+తస్మై శ్రీగురుమూర్తయే నమ ఇదం శ్రీదక్షిణామూర్తయే ॥ ౭ ॥
+
+విశ్వం పశ్యతి కార్యకారణతయా స్వస్వామిసంబంధతః
+శిష్యాచార్యతయా తథైవ పితృపుత్రాద్యాత్మనా భేదతః ।
+స్వప్నే జాగ్రతి వా య ఏష పురుషో మాయాపరిభ్రామితః
+తస్మై శ్రీగురుమూర్తయే నమ ఇదం శ్రీదక్షిణామూర్తయే ॥ ౮ ॥
+
+భూరంభాంస్యనలోఽనిలోఽంబరమహర్నాథో హిమాంశుః పుమాన్
+ఇత్యాభాతి చరాచరాత్మకమిదం యస్యైవ మూర్త్యష్టకం ।
+నాన్యత్ కించన విద్యతే విమృశతాం యస్మాత్పరస్మాద్విభోః
+తస్మై శ్రీగురుమూర్తయే నమ ఇదం శ్రీదక్షిణామూర్తయే ॥ ౯ ॥
+
+సర్వాత్మత్వమితి స్ఫుటీకృతమిదం యస్మాదముష్మిన్ స్తవే
+తేనాస్య శ్రవణాత్తదర్థమననాద్ధ్యానాచ్చ సంకీర్తనాత్ ।
+సర్వాత్మత్వమహావిభూతిసహితం స్యాదీశ్వరత్వం స్వతః
+సిద్ధ్యేత్తత్పునరష్టధా పరిణతం చైశ్వర్యమవ్యాహతమ్ ॥ ౧౦ ॥`,
   },
   {
-    id: "dsa-adv",
-    navLabel: "DSA — Advanced",
-    icon: "🚀",
-    storageKey: "dsa-advanced-v1",
-    data: DATA_DSA_ADVANCED,
-    hero: {
-      eyebrow: "Track 2 · After the 60 Days",
-      title: "DSA — Advanced & Rarely Used",
-      lede: "Segment trees, advanced graph algorithms, bitmask/digit DP, string algorithms, number theory, and the genuinely rare stuff. Most junior interviews never touch this — treat it as a reference shelf you can pull from fast, not a daily grind.",
-    },
+    id: "sp-guru-dakshinamurthy",
+    titleEn: "Guru Mantra — Dakshinamurthy",
+    subEn: "Salutation + Dhyana Shloka",
+    devanagari:
+`निधये सर्वविद्यानां
+भिषजे भवरोगिणाम् ।
+गुरवे सर्वलोकानां
+दक्षिणामूर्तये नमः ॥
+
+मौनव्याख्या प्रकटितपरब्रह्मतत्त्वं युवानं
+वर्षिष्ठान्तेवसदृषिगणैरावृतं ब्रह्मनिष्ठैः ।
+आचार्येन्द्रं करकलितचिन्मुद्रमानन्दमूर्तिं
+स्वात्मारामं मुदितवदनं दक्षिणामूर्तिमीडे ॥`,
+    telugu:
+`నిధయే సర్వవిద్యానాం
+భిషజే భవరోగిణామ్ ।
+గురవే సర్వలోకానాం
+దక్షిణామూర్తయే నమః ॥
+
+మౌనవ్యాఖ్యా ప్రకటిత పరబ్రహ్మతత్త్వం యువానం
+వర్షిష్ఠాంతేవసదృషిగణైరావృతం బ్రహ్మనిష్ఠైః ।
+ఆచార్యేంద్రం కరకలిత చిన్ముద్రమానందమూర్తిం
+స్వాత్మారామం ముదితవదనం దక్షిణామూర్తిమీడే ॥`,
   },
   {
-    id: "projects",
-    navLabel: "Projects",
-    icon: "🛠️",
-    storageKey: "projects-track-v1",
-    data: DATA_PROJECTS,
-    hero: {
-      eyebrow: "Track 3 · Build Order",
-      title: "Projects — Speed Reading Helper → Typing Tutor → Tempitera",
-      lede: "Each project is tiered <strong>MVP → V1 → Advanced</strong>. The Advanced tier of each is written so that checking off every item gets you to the exact resume bullet next to it — build in order, don't skip tiers.",
-    },
+    id: "sp-kalabhairavashtakam",
+    titleEn: "Sri Kalabhairavashtakam",
+    subEn: "8 verses + phala-shruti",
+    devanagari:
+`देवराजसेव्यमानपावनाङ्घ्रिपङ्कजं
+व्यालयज्ञसूत्रमिन्दुशेखरं कृपाकरम् ।
+नारदादियोगिवृन्दवन्दितं दिगम्बरं
+काशिकापुराधिनाथकालभैरवं भजे ॥ १ ॥
+
+भानुकोटिभास्वरं भवाब्धितारकं परं
+नीलकण्ठमीप्सितार्थदायकं त्रिलोचनम् ।
+कालकालमम्बुजाक्षमक्षशूलमक्षरं
+काशिकापुराधिनाथकालभैरवं भजे ॥ २ ॥
+
+शूलटङ्कपाशदण्डपाणिमादिकारणं
+श्यामकायमादिदेवमक्षरं निरामयम् ।
+भीमविक्रमं प्रभुं विचित्रताण्डवप्रियं
+काशिकापुराधिनाथकालभैरवं भजे ॥ ३ ॥
+
+भुक्तिमुक्तिदायकं प्रशस्तचारुविग्रहं
+भक्तवत्सलं स्थितं समस्तलोकविग्रहम् ।
+विनिक्वणन्मनोज्ञहेमकिङ्किणीलसत्कटिं
+काशिकापुराधिनाथकालभैरवं भजे ॥ ४ ॥
+
+धर्मसेतुपालकं त्वधर्ममार्गनाशकं
+कर्मपाशमोचकं सुशर्मदायकं विभुम् ।
+स्वर्णवर्णकेशपाशशोभिताङ्गनिर्मलं
+काशिकापुराधिनाथकालभैरवं भजे ॥ ५ ॥
+
+रत्नपादुकाप्रभाभिरामपादयुग्मकं
+नित्यमद्वितीयमिष्टदैवतं निरञ्जनम् ।
+मृत्युदर्पनाशनं करालदंष्ट्रमोक्षणं
+काशिकापुराधिनाथकालभैरवं भजे ॥ ६ ॥
+
+अट्टहासभिन्नपद्मजाण्डकोशसन्ततिं
+दृष्टिपातनष्टपापजालमुग्रशासनम् ।
+अष्टसिद्धिदायकं कपालमालिकाधरं
+काशिकापुराधिनाथकालभैरवं भजे ॥ ७ ॥
+
+भूतसङ्घनायकं विशालकीर्तिदायकं
+काशिवासिलोकपुण्यपापशोधकं विभुम् ।
+नीतिमार्गकोविदं पुरातनं जगत्पतिं
+काशिकापुराधिनाथकालभैरवं भजे ॥ ८ ॥
+
+कालभैरवाष्टकं पठन्ति ये मनोहरं
+ज्ञानमुक्तिसाधनं विचित्रपुण्यवर्धनम् ।
+शोकमोहदैन्यलोभकोपतापनाशनं
+ते प्रयान्ति कालभैरवाङ्घ्रिसन्निधिं ध्रुवम् ॥`,
+    telugu:
+`దేవరాజసేవ్యమానపావనాంఘ్రిపంకజం
+వ్యాలయజ్ఞసూత్రమిందుశేఖరం కృపాకరం ।
+నారదాదియోగివృందవందితం దిగంబరం
+కాశికాపురాధినాథ కాలభైరవం భజే ॥ ౧ ॥
+
+భానుకోటిభాస్వరం భవాబ్ధితారకం పరం
+నీలకంఠమీప్సితార్థదాయకం త్రిలోచనం ।
+కాలకాలమంబుజాక్షమక్షశూలమక్షరం
+కాశికాపురాధినాథ కాలభైరవం భజే ॥ ౨ ॥
+
+శూలటంకపాశదండపాణిమాదికారణం
+శ్యామకాయమాదిదేవమక్షరం నిరామయం ।
+భీమవిక్రమం ప్రభుం విచిత్రతాండవప్రియం
+కాశికాపురాధినాథ కాలభైరవం భజే ॥ ౩ ॥
+
+భుక్తిముక్తిదాయకం ప్రశస్తచారువిగ్రహం
+భక్తవత్సలం స్థితం సమస్తలోకవిగ్రహం ।
+వినిక్వణన్మనోజ్ఞహేమకింకిణీలసత్కటిం
+కాశికాపురాధినాథ కాలభైరవం భజే ॥ ౪ ॥
+
+ధర్మసేతుపాలకం త్వధర్మమార్గనాశకం
+కర్మపాశమోచకం సుశర్మదాయకం విభుమ్ ।
+స్వర్ణవర్ణకేశపాశశోభితాంగనిర్మలం
+కాశికాపురాధినాథ కాలభైరవం భజే ॥ ౫ ॥
+
+రత్నపాదుకాప్రభాభిరామపాదయుగ్మకం
+నిత్యమద్వితీయమిష్టదైవతం నిరంజనం ।
+మృత్యుదర్పనాశనం కరాళదంష్ట్రమోక్షదం
+కాశికాపురాధినాథ కాలభైరవం భజే ॥ ౬ ॥
+
+అట్టహాసభిన్నపద్మజాండకోశసంతతిం
+దృష్టిపాతనష్టపాపజాలముగ్రశాసనం ।
+అష్టసిద్ధిదాయకం కపాలమాలికాధరం
+కాశికాపురాధినాథ కాలభైరవం భజే ॥ ౭ ॥
+
+భూతసంఘనాయకం విశాలకీర్తిదాయకం
+కాశివాసిలోకపుణ్యపాపశోధకం విభుమ్ ।
+నీతిమార్గకోవిదం పురాతనం జగత్పతిం
+కాశికాపురాధినాథ కాలభైరవం భజే ॥ ౮ ॥
+
+కాలభైరవాష్టకం పఠంతి యే మనోహరం
+జ్ఞానముక్తిసాధనం విచిత్రపుణ్యవర్ధనం ।
+శోకమోహదైన్యలోభకోపతాపనాశనం
+తే ప్రయాంతి కాలభైరవాంఘ్రిసన్నిధిం ధ్రువమ్ ॥`,
   },
 ];
 
-const STATE = {
-  activeTabId: TABS[0].id,
-  checked: {}, // tabId -> Set of "campId::itemIndex"
-};
+DATA_SPIRITUAL.push(
+  {
+    id: "sp-mahakalabhairavashtakam",
+    titleEn: "Tikshnadamshtra Kalabhairavashtakam",
+    subEn: "Maha Kalabhairava Stotram — 11 verses (Rudrayamala tantric tradition)",
+    devanagari:
+`यं यं यं यक्षरूपं दशदिशिविदितं भूमिकम्पायमानं
+सं सं संहारमूर्तिं शिरमुकुटजटा शेखरं चन्द्रबिम्बम् ।
+दं दं दं दीर्घकायं विकृतनखमुखं चोर्ध्वरोमं करालं
+पं पं पं पापनाशं प्रणमत सततं भैरवं क्षेत्रपालम् ॥ १ ॥
 
-TABS.forEach((tab) => {
-  STATE.checked[tab.id] = loadChecked(tab.storageKey);
-});
+रं रं रं रक्तवर्णं कटिकटिततनुं तीक्ष्णदंष्ट्राकरालं
+घं घं घं घोष घोषं घघघघ घटितं घर्जरं घोरनादम् ।
+कं कं कं कालपाशं धृक धृक धृकितं ज्वालितं कामदाहं
+तं तं तं दिव्यदेहं प्रणमत सततं भैरवं क्षेत्रपालम् ॥ २ ॥
 
-function loadChecked(storageKey) {
-  try {
-    const raw = localStorage.getItem(storageKey);
-    return raw ? new Set(JSON.parse(raw)) : new Set();
-  } catch (e) {
-    return new Set();
-  }
-}
-function saveChecked(storageKey, set) {
-  try {
-    localStorage.setItem(storageKey, JSON.stringify([...set]));
-  } catch (e) {
-    /* storage unavailable — progress just won't persist */
-  }
-}
-function itemKey(campId, idx) {
-  return `${campId}::${idx}`;
-}
-function activeTab() {
-  return TABS.find((t) => t.id === STATE.activeTabId);
-}
-function tabProgress(tab) {
-  let total = 0, done = 0;
-  const checked = STATE.checked[tab.id];
-  tab.data.forEach((camp) => {
-    camp.items.forEach((_, idx) => {
-      total++;
-      if (checked.has(itemKey(camp.id, idx))) done++;
-    });
-  });
-  return { done, total };
-}
+लं लं लं लं वदन्तं लललल ललितं दीर्घजिह्वा करालं
+धूं धूं धूं धूम्रवर्णं स्फुटविकटमुखं भास्करं भीमरूपम् ।
+रुं रुं रुं रुण्डमालं रवितमनियतं ताम्रनेत्रं करालं
+नं नं नं नग्नभूषं प्रणमत सततं भैरवं क्षेत्रपालम् ॥ ३ ॥
 
-/* ---------------- render: tab switcher ---------------- */
-function renderTabSwitcher() {
-  const el = document.getElementById("tabSwitcher");
-  el.innerHTML = TABS.map((tab) => {
-    const { done, total } = tabProgress(tab);
-    const pct = total ? Math.round((done / total) * 100) : 0;
-    const active = tab.id === STATE.activeTabId ? "active" : "";
-    return `
-      <button class="tab-btn ${active}" data-tab="${tab.id}">
-        <span class="tab-btn-icon">${tab.icon}</span>
-        <span>${tab.navLabel}</span>
-        <span class="tab-btn-pct">${pct}%</span>
-      </button>`;
-  }).join("");
-  el.querySelectorAll(".tab-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      STATE.activeTabId = btn.dataset.tab;
-      renderAll();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  });
-}
+वं वं वं वायुवेगं नतजनसदयं ब्रह्मसारं परन्तं
+खं खं खं खड्गहस्तं त्रिभुवनविलयं भास्करं भीमरूपम् ।
+चं चं चं चलित्वाऽचल चल चलिताच्चालितं भूमिचक्रं
+मं मं मं मायिरूपं प्रणमत सततं भैरवं क्षेत्रपालम् ॥ ४ ॥
 
-/* ---------------- render: hero ---------------- */
-function renderHero() {
-  const tab = activeTab();
-  document.getElementById("hero").innerHTML = `
-    <p class="eyebrow">${tab.hero.eyebrow}</p>
-    <h1>${tab.hero.title}</h1>
-    <p class="hero-lede">${tab.hero.lede}</p>
-  `;
-  document.getElementById("trailSub").textContent = tab.navLabel;
-}
+शं शं शं शङ्खहस्तं शशिकरधवलं मोक्ष सम्पूर्ण तेजं
+मं मं मं मं महान्तं कुलमकुलकुलं मन्त्रगुप्तं सुनित्यम् ।
+यं यं यं भूतनाथं किलिकिलिकिलितं बालकेलिप्रधानं
+अं अं अं अन्तरिक्षं प्रणमत सततं भैरवं क्षेत्रपालम् ॥ ५ ॥
 
-/* ---------------- render: sidebar nav ---------------- */
-function renderTrailNav() {
-  const tab = activeTab();
-  const checked = STATE.checked[tab.id];
-  const el = document.getElementById("trailNav");
-  el.innerHTML = tab.data.map((camp, i) => {
-    const total = camp.items.length;
-    const done = camp.items.filter((_, idx) => checked.has(itemKey(camp.id, idx))).length;
-    const complete = done === total;
-    return `
-      <a href="#${camp.id}" class="trail-stop ${complete ? "complete" : ""}" data-camp="${camp.id}">
-        <span class="trail-dot">${complete ? "✓" : i + 1}</span>
-        <span class="trail-stop-label">
-          <span class="trail-stop-title">${camp.title}</span>
-          <span class="trail-stop-count">${camp.phaseLabel} · ${done}/${total}</span>
-        </span>
-      </a>`;
-  }).join("");
-}
+खं खं खं खड्गभेदं विषममृतमयं कालकालं करालं
+क्षं क्षं क्षं क्षिप्रवेगं दहदहदहनं तप्तसन्दीप्यमानम् ।
+हौं हौं हौङ्कारनादं प्रकटितगहनं गर्जितैर्भूमिकम्पं
+वं वं वं बाललीलं प्रणमत सततं भैरवं क्षेत्रपालम् ॥ ६ ॥
 
-/* ---------------- render: camps + items ---------------- */
-function renderCamps() {
-  const tab = activeTab();
-  const checked = STATE.checked[tab.id];
-  const el = document.getElementById("camps");
-  el.innerHTML = tab.data.map((camp, i) => {
-    const total = camp.items.length;
-    const done = camp.items.filter((_, idx) => checked.has(itemKey(camp.id, idx))).length;
-    const pct = total ? Math.round((done / total) * 100) : 0;
-    const itemsHtml = camp.items.map((item, idx) => {
-      const key = itemKey(camp.id, idx);
-      const isChecked = checked.has(key);
-      return `
-        <div class="task ${isChecked ? "done" : ""}" data-key="${key}">
-          <span class="task-box"></span>
-          <div class="task-body">
-            <span class="task-text">${badgeHtml(item.type)}${item.text}</span>
-          </div>
-        </div>`;
-    }).join("");
-    return `
-      <section class="camp" id="${camp.id}">
-        <div class="camp-header">
-          <div class="camp-marker">${done === total ? "✓" : i + 1}</div>
-          <div class="camp-titles">
-            <p class="camp-phase-tag">${camp.phaseLabel}</p>
-            <h2>${camp.title}</h2>
-            <p class="camp-subtitle">${camp.subtitle}</p>
-          </div>
-          <div class="camp-progress">
-            <div class="camp-progress-count">${done}/${total}</div>
-            <div class="camp-progress-bar"><div class="camp-progress-fill" style="width:${pct}%"></div></div>
-          </div>
-        </div>
-        <div class="camp-items">${itemsHtml}</div>
-      </section>`;
-  }).join("");
+सं सं सं सिद्धियोगं सकलगुणमखं देवदेवं प्रसन्नं
+पं पं पं पद्मनाभं हरिहरमयनं चन्द्रसूर्याग्निनेत्रम् ।
+ऐं ऐं ऐं ऐश्वर्यनाथं सततभयहरं पूर्वदेवस्वरूपं
+रौं रौं रौं रौद्ररूपं प्रणमत सततं भैरवं क्षेत्रपालम् ॥ ७ ॥
 
-  el.querySelectorAll(".task").forEach((row) => {
-    row.addEventListener("click", () => toggleItem(row.dataset.key));
-  });
-}
+हं हं हं हंसयानं हसितकलहकं मुक्तयोगाट्टहासं
+नं नं नं नेत्ररूपं शिरमुकुटजटाबन्धबन्धाग्रहस्तम् ।
+टं टं टं टङ्कारनादं त्रिदशलटलटं कामगर्वापहारं
+भुं भुं भुं भूतनाथं प्रणमत सततं भैरवं क्षेत्रपालम् ॥ ८ ॥
 
-/* ---------------- render: global progress bar ---------------- */
-function renderGlobalProgress() {
-  const tab = activeTab();
-  const { done, total } = tabProgress(tab);
-  const pct = total ? Math.round((done / total) * 100) : 0;
-  document.getElementById("globalProgressFill").style.width = pct + "%";
-  document.getElementById("globalProgressText").textContent = `${done} / ${total} checkpoints · ${tab.navLabel}`;
-}
+इत्येवं कामयुक्तं प्रपठति नियतं भैरवस्याष्टकं यो
+निर्विघ्नं दुःखनाशं सुरभयहरणं डाकिनीशाकिनीनाम् ।
+नश्येद्धि व्याघ्रसर्पौ हुतवह सलिले राज्यशंसस्य शून्यं
+सर्वा नश्यन्ति दूरं विपद इति भृशं चिन्तनात्सर्वसिद्धिम् ॥ ९ ॥
 
-/* ---------------- interactions ---------------- */
-function toggleItem(key) {
-  const tab = activeTab();
-  const checked = STATE.checked[tab.id];
-  if (checked.has(key)) checked.delete(key);
-  else checked.add(key);
-  saveChecked(tab.storageKey, checked);
-  renderAll();
-}
+भैरवस्याष्टकमिदं षाण्मासं यः पठेन्नरः
+स याति परमं स्थानं यत्र देवो महेश्वरः ॥ १० ॥
 
-function resetCurrentTrack() {
-  const tab = activeTab();
-  if (!confirm(`Reset all progress on "${tab.navLabel}"? This can't be undone.`)) return;
-  STATE.checked[tab.id] = new Set();
-  saveChecked(tab.storageKey, STATE.checked[tab.id]);
-  renderAll();
-}
+सिन्दूरारुणगात्रं च सर्वजन्मविनिर्मितम् ।
+मुकुटाग्र्यधरं देवं भैरवं प्रणमाम्यहम् ॥ ११ ॥
 
-function renderAll() {
-  renderTabSwitcher();
-  renderHero();
-  renderTrailNav();
-  renderCamps();
-  renderGlobalProgress();
-}
+नमो भूतनाथं नमो प्रेतनाथं
+नमः कालकालं नमः रुद्रमालम् ।
+नमः कालिकाप्रेमलोलं करालं
+नमो भैरवं काशिकाक्षेत्रपालम् ॥
+इति तीक्ष्णदंष्ट्र कालभैरवाष्टकम् ॥`,
+    telugu:
+`యం యం యం యక్షరూపం దశదిశివిదితం భూమికంపాయమానం
+సం సం సంహారమూర్తిం శిరముకుటజటా శేఖరం చంద్రబింబమ్ ।
+దం దం దం దీర్ఘకాయం వికృతనఖముఖం చోర్ధ్వరోమం కరాళం
+పం పం పం పాపనాశం ప్రణమత సతతం భైరవం క్షేత్రపాలమ్ ॥ ౧ ॥
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderAll();
-  document.getElementById("resetBtn").addEventListener("click", resetCurrentTrack);
-});
+రం రం రం రక్తవర్ణం కటికటితతనుం తీక్ష్ణదంష్ట్రాకరాళం
+ఘం ఘం ఘం ఘోష ఘోషం ఘఘఘఘ ఘటితం ఘర్జరం ఘోరనాదమ్ ।
+కం కం కం కాలపాశం ధృక ధృక ధృకితం జ్వాలితం కామదాహం
+తం తం తం దివ్యదేహం ప్రణమత సతతం భైరవం క్షేత్రపాలమ్ ॥ ౨ ॥
+
+లం లం లం లం వదంతం లలలల లలితం దీర్ఘజిహ్వా కరాళం
+ధూం ధూం ధూం ధూమ్రవర్ణం స్ఫుటవికటముఖం భాస్కరం భీమరూపమ్ ।
+రుం రుం రుం రుండమాలం రవితమనియతం తామ్రనేత్రం కరాళం
+నం నం నం నగ్నభూషం ప్రణమత సతతం భైరవం క్షేత్రపాలమ్ ॥ ౩ ॥
+
+వం వం వం వాయువేగం నతజనసదయం బ్రహ్మసారం పరంతం
+ఖం ఖం ఖం ఖడ్గహస్తం త్రిభువనవిలయం భాస్కరం భీమరూపమ్ ।
+చం చం చం చలిత్వాఽచల చల చలితాచ్చాలితం భూమిచక్రం
+మం మం మం మాయిరూపం ప్రణమత సతతం భైరవం క్షేత్రపాలమ్ ॥ ౪ ॥
+
+శం శం శం శంఖహస్తం శశికరధవళం మోక్ష సంపూర్ణ తేజం
+మం మం మం మం మహాంతం కులమకులకులం మంత్రగుప్తం సునిత్యమ్ ।
+యం యం యం భూతనాథం కిలికిలికిలితం బాలకేళిప్రధానం
+అం అం అం అంతరిక్షం ప్రణమత సతతం భైరవం క్షేత్రపాలమ్ ॥ ౫ ॥
+
+ఖం ఖం ఖం ఖడ్గభేదం విషమమృతమయం కాలకాలం కరాళం
+క్షం క్షం క్షం క్షిప్రవేగం దహదహదహనం తప్తసందీప్యమానమ్ ।
+హౌం హౌం హౌంకారనాదం ప్రకటితగహనం గర్జితైర్భూమికంపం
+వం వం వం బాలలీలం ప్రణమత సతతం భైరవం క్షేత్రపాలమ్ ॥ ౬ ॥
+
+సం సం సం సిద్ధియోగం సకలగుణమఖం దేవదేవం ప్రసన్నం
+పం పం పం పద్మనాభం హరిహరమయనం చంద్రసూర్యాగ్నినేత్రమ్ ।
+ఐం ఐం ఐం ఐశ్వర్యనాథం సతతభయహరం పూర్వదేవస్వరూపం
+రౌం రౌం రౌం రౌద్రరూపం ప్రణమత సతతం భైరవం క్షేత్రపాలమ్ ॥ ౭ ॥
+
+హం హం హం హంసయానం హసితకలహకం ముక్తయోగాట్టహాసం
+నం నం నం నేత్రరూపం శిరముకుటజటాబంధబంధాగ్రహస్తమ్ ।
+టం టం టం టంకారనాదం త్రిదశలటలటం కామగర్వాపహారం
+భుం భుం భుం భూతనాథం ప్రణమత సతతం భైరవం క్షేత్రపాలమ్ ॥ ౮ ॥
+
+ఇత్యేవం కామయుక్తం ప్రపఠతి నియతం భైరవస్యాష్టకం యో
+నిర్విఘ్నం దుఃఖనాశం సురభయహరణం డాకినీశాకినీనామ్ ।
+నశ్యేద్ధి వ్యాఘ్రసర్పౌ హుతవహ సలిలే రాజ్యశంసస్య శూన్యం
+సర్వా నశ్యంతి దూరం విపద ఇతి భృశం చింతనాత్సర్వసిద్ధిమ్ ॥ ౯ ॥
+
+భైరవస్యాష్టకమిదం షాణ్మాసం యః పఠేన్నరః
+స యాతి పరమం స్థానం యత్ర దేవో మహేశ్వరః ॥ ౧౦ ॥
+
+సిందూరారుణగాత్రం చ సర్వజన్మవినిర్మితమ్ ।
+ముకుటాగ్ర్యధరం దేవం భైరవం ప్రణమామ్యహమ్ ॥ ౧౧ ॥
+
+నమో భూతనాథం నమో ప్రేతనాథం
+నమః కాలకాలం నమః రుద్రమాలమ్ ।
+నమః కాలికాప్రేమలోలం కరాళం
+నమో భైరవం కాశికాక్షేత్రపాలమ్ ॥
+ఇతి తీక్ష్ణదంష్ట్ర కాలభైరవాష్టకమ్ ॥`,
+  },
+  {
+    id: "sp-gayatri",
+    titleEn: "Gayatri Mantra",
+    subEn: "Rigveda 3.62.10",
+    devanagari:
+`ॐ भूर्भुवः स्वः ।
+तत्सवितुर्वरेण्यं

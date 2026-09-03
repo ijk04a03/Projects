@@ -28,5 +28,9 @@ test.set('jacket', 'blue')
 test.set('kite', 'pink')
 test.set('lion', 'golden')
 
+console.log(test.get('apple'));
+console.log(test.has('kite'));
+console.log(test.keys());
+
 
 console.log(test.entries());
