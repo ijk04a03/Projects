@@ -82,7 +82,6 @@ class Tree {
         }
     }
     deleteItem(value) {
-        if (!this.includes(value)) return null;
         let current = this.root;
         let previous = null;
         let mark = null;

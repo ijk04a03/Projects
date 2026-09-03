@@ -853,3 +853,656 @@ DATA_SPIRITUAL.push(
     devanagari:
 `ॐ भूर्भुवः स्वः ।
 तत्सवितुर्वरेण्यं
+भर्गो देवस्य धीमहि ।
+धियो यो नः प्रचोदयात् ॥`,
+    telugu:
+`ఓం భూర్భువః స్వః ।
+తత్సవితుర్వరేణ్యం
+భర్గో దేవస్య ధీమహి ।
+ధియో యో నః ప్రచోదయాత్ ॥`,
+  },
+  {
+    id: "sp-mahamrityunjaya",
+    titleEn: "Mahamrityunjaya Mantra",
+    subEn: "Rigveda 7.59.12",
+    devanagari:
+`ॐ त्र्यम्बकं यजामहे
+सुगन्धिं पुष्टिवर्धनम् ।
+उर्वारुकमिव बन्धनान्
+मृत्योर्मुक्षीय माऽमृतात् ॥`,
+    telugu:
+`ఓం త్ర్యంబకం యజామహే
+సుగంధిం పుష్టివర్ధనం ।
+ఉర్వారుకమివ బంధనాన్
+మృత్యోర్ముక్షీయ మామృతాత్ ॥`,
+  },
+  {
+    id: "sp-panchakshari",
+    titleEn: "Shiva Panchakshari Mantra",
+    subEn: "The five-syllable mantra",
+    devanagari:
+`ॐ नमः शिवाय ॥
+नमः शिवाय ॥`,
+    telugu:
+`ఓం నమః శివాయ ॥
+నమః శివాయ ॥`,
+  },
+  {
+    id: "sp-guru-mantras",
+    titleEn: "Guru Mantras",
+    subEn: "Moola Mantra · Guru Gayatri · Dakshinamurthy Mantra",
+    devanagari:
+`गुरु मूलमन्त्रः
+ॐ गुरवे नमः ॥
+
+गुरु गायत्री
+ॐ गुरुदेवाय विद्महे
+परब्रह्मणे धीमहि ।
+तन्नो गुरुः प्रचोदयात् ॥
+
+दक्षिणामूर्ति मन्त्रः
+ॐ नमो भगवते दक्षिणामूर्तये
+मह्यं मेधां प्रज्ञां प्रयच्छ स्वाहा ॥`,
+    telugu:
+`గురు మంత్రం
+ఓం గురవే నమః ॥
+
+గురు గాయత్రీ
+ఓం గురుదేవాయ విద్మహే
+పరబ్రహ్మణే ధీమహి ।
+తన్నో గురుః ప్రచోదయాత్ ॥
+
+దక్షిణామూర్తి మంత్రం
+ఓం నమో భగవతే దక్షిణామూర్తయే
+మహ్యం మేధాం ప్రజ్ఞాం ప్రయచ్ఛ స్వాహా ॥`,
+  },
+  {
+    id: "sp-hanuman-mantras",
+    titleEn: "Hanuman Mantras",
+    subEn: "Moola Mantra · Hanuman Gayatri · Bija Mantra",
+    devanagari:
+`मूल मन्त्रः
+ॐ हनुमते नमः ॥
+
+हनुमद्गायत्री
+ॐ आञ्जनेयाय विद्महे
+वायुपुत्राय धीमहि ।
+तन्नो हनुमत् प्रचोदयात् ॥
+
+एक प्रसिद्ध मन्त्ररूपम्
+ॐ ह्रीं हनुमते नमः ॥`,
+    telugu:
+`మూల మంత్రం
+ఓం హనుమతే నమః ॥
+
+హనుమత్ గాయత్రీ
+ఓం ఆంజనేయాయ విద్మహే
+వాయుపుత్రాయ ధీమహి ।
+తన్నో హనుమత్ ప్రచోదయాత్ ॥
+
+ప్రసిద్ధ బీజ మంత్రరూపం
+ఓం హ్రీం హనుమతే నమః ॥`,
+  },
+);
+
+DATA_SPIRITUAL.push(
+  {
+    id: "sp-hanuman-chalisa",
+    titleEn: "Hanuman Chalisa",
+    subEn: "Goswami Tulsidas — Doha, Chaupai, closing Doha",
+    devanagari:
+`दोहा
+श्रीगुरु चरन सरोज रज
+निज मनु मुकुरु सुधारि ।
+बरनऊँ रघुबर बिमल जसु
+जो दायकु फल चारि ॥
+
+बुद्धिहीन तनु जानिके
+सुमिरौं पवनकुमार ।
+बल बुधि बिद्या देहु मोहिं
+हरहु कलेस बिकार ॥
+
+चौपाई
+जय हनुमान ज्ञान गुन सागर ।
+जय कपीस तिहुँ लोक उजागर ॥
+राम दूत अतुलित बल धामा ।
+अंजनि-पुत्र पवनसुत नामा ॥
+महाबीर बिक्रम बजरंगी ।
+कुमति निवार सुमति के संगी ॥
+कंचन बरन बिराज सुबेसा ।
+कानन कुण्डल कुंचित केसा ॥
+हाथ बज्र औ ध्वजा बिराजै ।
+काँधे मूँज जनेऊ साजै ॥
+शंकर सुवन केसरी नंदन ।
+तेज प्रताप महा जग बंदन ॥
+विद्यावान गुनी अति चातुर ।
+राम काज करिबे को आतुर ॥
+प्रभु चरित्र सुनिबे को रसिया ।
+राम लखन सीता मन बसिया ॥
+सूक्ष्म रूप धरि सियहिं दिखावा ।
+बिकट रूप धरि लंक जरावा ॥
+भीम रूप धरि असुर संहारे ।
+रामचंद्र के काज सँवारे ॥
+लाय सजीवन लखन जियाए ।
+श्रीरघुबीर हरषि उर लाए ॥
+रघुपति कीन्ही बहुत बड़ाई ।
+तुम मम प्रिय भरतहि सम भाई ॥
+सहस बदन तुम्हरो जस गावैं ।
+अस कहि श्रीपति कंठ लगावैं ॥
+सनकादिक ब्रह्मादि मुनीसा ।
+नारद सारद सहित अहीसा ॥
+जम कुबेर दिगपाल जहाँ ते ।
+कबि कोबिद कहि सके कहाँ ते ॥
+तुम उपकार सुग्रीवहिं कीन्हा ।
+राम मिलाय राज पद दीन्हा ॥
+तुम्हरो मंत्र बिभीषण माना ।
+लंकेश्वर भए सब जग जाना ॥
+जुग सहस्र योजन पर भानू ।
+लील्यो ताहि मधुर फल जानू ॥
+प्रभु मुद्रिका मेलि मुख माहीं ।
+जलधि लाँघि गए अचरज नाहीं ॥
+दुर्गम काज जगत के जेते ।
+सुगम अनुग्रह तुम्हरे तेते ॥
+राम दुआरे तुम रखवारे ।
+होत न आज्ञा बिनु पैसारे ॥
+सब सुख लहै तुम्हारी सरना ।
+तुम रक्षक काहू को डरना ॥
+आपन तेज सँहारो आपै ।
+तीनों लोक हाँक तें काँपै ॥
+भूत पिशाच निकट नहिं आवै ।
+महाबीर जब नाम सुनावै ॥
+नासै रोग हरै सब पीरा ।
+जपत निरंतर हनुमत बीरा ॥
+संकट तें हनुमान छुड़ावै ।
+मन क्रम वचन ध्यान जो लावै ॥
+सब पर राम तपस्वी राजा ।
+तिन के काज सकल तुम साजा ॥
+और मनोरथ जो कोई लावै ।
+सोइ अमित जीवन फल पावै ॥
+चारों जुग परताप तुम्हारा ।
+है परसिद्ध जगत उजियारा ॥
+साधु संत के तुम रखवारे ।
+असुर निकंदन राम दुलारे ॥
+अष्ट सिद्धि नौ निधि के दाता ।
+अस बर दीन जानकी माता ॥
+राम रसायन तुम्हरे पासा ।
+सदा रहो रघुपति के दासा ॥
+तुम्हरे भजन राम को पावै ।
+जनम जनम के दुख बिसरावै ॥
+अंतकाल रघुबर पुर जाई ।
+जहाँ जन्म हरिभक्त कहाई ॥
+और देवता चित्त न धरई ।
+हनुमत सेइ सर्व सुख करई ॥
+संकट कटै मिटै सब पीरा ।
+जो सुमिरै हनुमत बलबीरा ॥
+जय जय जय हनुमान गोसाईं ।
+कृपा करहु गुरुदेव की नाईं ॥
+जो सत बार पाठ कर कोई ।
+छूटहि बंदि महा सुख होई ॥
+जो यह पढ़ै हनुमान चालीसा ।
+होय सिद्धि साखी गौरीसा ॥
+तुलसीदास सदा हरि चेरा ।
+कीजै नाथ हृदय महँ डेरा ॥
+
+दोहा
+पवनतनय संकट हरण
+मंगल मूरति रूप ।
+राम लखन सीता सहित
+हृदय बसहु सुर भूप ॥`,
+    telugu:
+`దోహా
+శ్రీగురుచరణ సరోజరజ నిజమన ముకుర సుధారి ।
+బరనఊం రఘుబర బిమల జసు జో దాయక ఫల చారి ॥
+
+బుద్ధిహీన తనుజానికే సుమిరౌం పవనకుమార ।
+బల బుద్ధి విద్యా దేహు మోహిం హరహు కలేస బికార ॥
+
+చౌపాయీ
+జయ హనుమాన జ్ఞాన గుణ సాగర ।
+జయ కపీశ తిహుఁ లోక ఉజాగర ॥
+రామదూత అతులిత బల ధామా ।
+అంజని పుత్ర పవనసుత నామా ॥
+మహాబీర బిక్రమ బజరంగీ ।
+కుమతి నివార సుమతి కే సంగీ ॥
+కంచన బరణ బిరాజ సుబేసా ।
+కానన కుండల కుంచిత కేసా ॥
+హాథ బజ్ర ఔ ధ్వజా బిరాజై ।
+కాంధే మూంజ జనేఊ సాజై ॥
+శంకర సువన కేసరీ నందన ।
+తేజ ప్రతాప మహా జగ వందన ॥
+విద్యావాన గునీ అతి చాతుర ।
+రామ కాజ కరిబే కో ఆతుర ॥
+ప్రభు చరిత్ర సునిబే కో రసియా ।
+రామ లఖన సీతా మన బసియా ॥
+సూక్ష్మ రూప ధరి సియహిం దిఖావా ।
+బికట రూప ధరి లంక జరావా ॥
+భీమ రూప ధరి అసుర సంహారే ।
+రామచంద్ర కే కాజ సంవారే ॥
+లాయ సజీవన లఖన జియాయే ।
+శ్రీరఘుబీర హరషి ఉర లాయే ॥
+రఘుపతి కీంహీ బహుత బడాయీ ।
+తుమ మమ ప్రియ భరతహి సమ భాయీ ॥
+సహస బదన తుమ్హరో జస గావైం ।
+అస కహి శ్రీపతి కంఠ లగావైం ॥
+సనకాదిక బ్రహ్మాది మునీసా ।
+నారద సారద సహిత అహీసా ॥
+జమ కుబేర దిగపాల జహాం తే ।
+కబి కోబిద కహి సకే కహాం తే ॥
+తుమ ఉపకార సుగ్రీవహిం కీంహా ।
+రామ మిలాయ రాజ పద దీంహా ॥
+తుమ్హరో మంత్ర బిభీషణ మానా ।
+లంకేశ్వర భయే సబ జగ జానా ॥
+జుగ సహస్ర యోజన పర భానూ ।
+లీల్యో తాహి మధుర ఫల జానూ ॥
+ప్రభు ముద్రికా మేలి ముఖ మాహీం ।
+జలధి లాంఘి గయే అచరజ నాహీం ॥
+దుర్గమ కాజ జగత కే జేతే ।
+సుగమ అనుగ్రహ తుమ్హరే తేతే ॥
+రామ దుఆరే తుమ రఖవారే ।
+హోత న ఆజ్ఞా బిను పైసారే ॥
+సబ సుఖ లహై తుమ్హారీ సరనా ।
+తుమ రక్షక కాహూ కో డరనా ॥
+ఆపన తేజ సంహారో ఆపై ।
+తీనోం లోక హాంక తేం కాంపై ॥
+భూత పిశాచ నికట నహిం ఆవై ।
+మహాబీర జబ నామ సునావై ॥
+నాసై రోగ హరై సబ పీరా ।
+జపత నిరంతర హనుమత బీరా ॥
+సంకట తేం హనుమాన ఛుడావై ।
+మన క్రమ వచన ధ్యాన జో లావై ॥
+సబ పర రామ తపస్వీ రాజా ।
+తిన కే కాజ సకల తుమ సాజా ॥
+ఔర మనోరథ జో కోయి లావై ।
+సోయి అమిత జీవన ఫల పావై ॥
+చారోం జుగ పరతాప తుమ్హారా ।
+హై పరసిద్ధ జగత ఉజియారా ॥
+సాధు సంత కే తుమ రఖవారే ।
+అసుర నికందన రామ దులారే ॥
+అష్ట సిద్ధి నౌ నిధి కే దాతా ।
+అస బర దీన జానకీ మాతా ॥
+రామ రసాయన తుమ్హరే పాసా ।
+సదా రహో రఘుపతి కే దాసా ॥
+తుమ్హరే భజన రామ కో పావై ।
+జనమ జనమ కే దుఖ బిసరావై ॥
+అంతకాల రఘుబర పుర జాయీ ।
+జహాం జన్మ హరి భక్త కహాయీ ॥
+ఔర దేవతా చిత్త న ధరయీ ।
+హనుమత సేయి సర్వ సుఖ కరయీ ॥
+సంకట కటై మిటై సబ పీరా ।
+జో సుమిరై హనుమత బలబీరా ॥
+జై జై జై హనుమాన గోసాయీ ।
+కృపా కరహు గురుదేవ కీ నాయీ ॥
+జో సత బార పాఠ కర కోయీ ।
+ఛూటహి బంది మహా సుఖ హోయీ ॥
+జో యహ పఢై హనుమాన్ చాలీసా ।
+హోయ సిద్ధి సాఖీ గౌరీశా ॥
+తులసీదాస సదా హరి చేరా ।
+కీజై నాథ హృదయ మహ డేరా ॥
+
+దోహా
+పవనతనయ సంకట హరణ మంగళ మూరతి రూప్ ।
+రామ లఖన సీతా సహిత హృదయ బసహు సుర భూప్ ॥`,
+  },
+  {
+    id: "sp-shanti-mantras",
+    titleEn: "Shanti Mantras",
+    subEn: "Sarve Bhavantu Sukhinah · Saha Nau Avatu",
+    devanagari:
+`सर्वे भवन्तु सुखिनः
+सर्वे भवन्तु सुखिनः
+सर्वे सन्तु निरामयाः ।
+सर्वे भद्राणि पश्यन्तु
+मा कश्चिद्दुःखभाग्भवेत् ॥
+ॐ शान्तिः शान्तिः शान्तिः ॥
+
+सह नाववतु
+ॐ सह नाववतु ।
+सह नौ भुनक्तु ।
+सह वीर्यं करवावहै ।
+तेजस्विनावधीतमस्तु
+मा विद्विषावहै ॥
+ॐ शान्तिः शान्तिः शान्तिः ॥`,
+    telugu:
+`సర్వే భవంతు సుఖినః
+సర్వే భవంతు సుఖినః
+సర్వే సంతు నిరామయాః ।
+సర్వే భద్రాణి పశ్యంతు
+మా కశ్చిద్దుఃఖభాగ్భవేత్ ॥
+ఓం శాంతిః శాంతిః శాంతిః ॥
+
+గురు–శాంతి మంత్రం
+ఓం సహనావవతు ।
+సహ నౌ భునక్తు ।
+సహ వీర్యం కరవావహై ।
+తేజస్వినావధీతమస్తు
+మా విద్విషావహై ॥
+ఓం శాంతిః శాంతిః శాంతిః ॥`,
+  },
+  {
+    id: "sp-closing",
+    titleEn: "Closing Invocations",
+    subEn: "Samapanam",
+    devanagari:
+`ॐ नमः शिवाय ।
+ॐ दक्षिणामूर्तये नमः ।
+ॐ गुरवे नमः ।
+ॐ कालभैरवाय नमः ।
+ॐ महाकालभैरवाय नमः ।
+ॐ हनुमते नमः ।
+ॐ शान्तिः शान्तिः शान्तिः ॥`,
+    telugu:
+`ఓం నమః శివాయ ।
+ఓం దక్షిణామూర్తయే నమః ।
+ఓం గురవే నమః ।
+ఓం కాలభైరవాయ నమః ।
+ఓం మహాకాలభైరవాయ నమః ।
+ఓం హనుమతే నమః ।
+ఓం శాంతిః శాంతిః శాంతిః ॥`,
+  },
+);
+
+/* =========================================================================
+   TAB CONFIG
+   ========================================================================= */
+const TABS = [
+  {
+    id: "dsa",
+    navLabel: "DSA + C++",
+    icon: "🧮",
+    storageKey: "dsa-60-day-v1",
+    data: DATA_DSA,
+    hero: {
+      eyebrow: "Track 1 · 60 Days",
+      title: "DSA + C++ — Beginner to Interview-Ready",
+      lede: "You know C++ syntax but haven't really done DSA yet — so this starts from complexity analysis and the STL, and moves pattern by pattern through everything a junior-role interview will realistically ask. Each camp below is a <em>pattern</em> — finish every checkpoint in it and it's marked complete on the trail.",
+    },
+  },
+  {
+    id: "dsa-adv",
+    navLabel: "DSA — Advanced",
+    icon: "🚀",
+    storageKey: "dsa-advanced-v1",
+    data: DATA_DSA_ADVANCED,
+    hero: {
+      eyebrow: "Track 2 · After the 60 Days",
+      title: "DSA — Advanced & Rarely Used",
+      lede: "Segment trees, advanced graph algorithms, bitmask/digit DP, string algorithms, number theory, and the genuinely rare stuff. Most junior interviews never touch this — treat it as a reference shelf you can pull from fast, not a daily grind.",
+    },
+  },
+  {
+    id: "projects",
+    navLabel: "Projects",
+    icon: "🛠️",
+    storageKey: "projects-track-v1",
+    data: DATA_PROJECTS,
+    hero: {
+      eyebrow: "Track 3 · Build Order",
+      title: "Projects — Speed Reading Helper → Typing Tutor → Tempitera",
+      lede: "Each project is tiered <strong>MVP → V1 → Advanced</strong>. The Advanced tier of each is written so that checking off every item gets you to the exact resume bullet next to it — build in order, don't skip tiers.",
+    },
+  },
+  {
+    id: "spiritual",
+    navLabel: "Spiritual",
+    icon: "🕉️",
+    kind: "reference",
+    data: DATA_SPIRITUAL,
+    hero: {
+      eyebrow: "Track 4 · Reference",
+      title: "Spiritual — Stotras & Mantras",
+      lede: "The same mantras, the same pronunciation — only the script changes. Use the अ / తె switch on this tab to toggle every text on the page between Devanagari and Telugu.",
+    },
+  },
+];
+
+const STATE = {
+  activeTabId: TABS.some((t) => t.id === localStorage.getItem("active-tab-v1"))
+    ? localStorage.getItem("active-tab-v1")
+    : TABS[0].id,
+  checked: {}, // tabId -> Set of "campId::itemIndex"
+  scriptLang: "devanagari", // "devanagari" | "telugu" — for the Spiritual tab
+};
+
+TABS.forEach((tab) => {
+  STATE.checked[tab.id] = loadChecked(tab.storageKey);
+});
+
+function loadChecked(storageKey) {
+  try {
+    const raw = localStorage.getItem(storageKey);
+    return raw ? new Set(JSON.parse(raw)) : new Set();
+  } catch (e) {
+    return new Set();
+  }
+}
+function saveChecked(storageKey, set) {
+  try {
+    localStorage.setItem(storageKey, JSON.stringify([...set]));
+  } catch (e) {
+    /* storage unavailable — progress just won't persist */
+  }
+}
+function itemKey(campId, idx) {
+  return `${campId}::${idx}`;
+}
+function activeTab() {
+  return TABS.find((t) => t.id === STATE.activeTabId);
+}
+function tabProgress(tab) {
+  if (tab.kind === "reference") return { done: tab.data.length, total: tab.data.length };
+  let total = 0, done = 0;
+  const checked = STATE.checked[tab.id];
+  tab.data.forEach((camp) => {
+    camp.items.forEach((_, idx) => {
+      total++;
+      if (checked.has(itemKey(camp.id, idx))) done++;
+    });
+  });
+  return { done, total };
+}
+
+/* ---------------- render: tab switcher ---------------- */
+function renderTabSwitcher() {
+  const el = document.getElementById("tabSwitcher");
+  el.innerHTML = TABS.map((tab) => {
+    const { done, total } = tabProgress(tab);
+    const pct = total ? Math.round((done / total) * 100) : 0;
+    const active = tab.id === STATE.activeTabId ? "active" : "";
+    const rightHtml = tab.kind === "reference"
+      ? `<span class="lang-switch" data-lang-switch="${tab.id}">
+           <button class="lang-seg ${STATE.scriptLang === "devanagari" ? "active" : ""}" data-lang="devanagari">अ</button>
+           <button class="lang-seg ${STATE.scriptLang === "telugu" ? "active" : ""}" data-lang="telugu">తె</button>
+         </span>`
+      : `<span class="tab-btn-pct">${pct}%</span>`;
+    return `
+      <button class="tab-btn ${active}" data-tab="${tab.id}">
+        <span class="tab-btn-icon">${tab.icon}</span>
+        <span>${tab.navLabel}</span>
+        ${rightHtml}
+      </button>`;
+  }).join("");
+  el.querySelectorAll(".tab-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      STATE.activeTabId = btn.dataset.tab;
+      localStorage.setItem("active-tab-v1", STATE.activeTabId);
+      renderAll();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+  el.querySelectorAll(".lang-seg").forEach((seg) => {
+    seg.addEventListener("click", (e) => {
+      e.stopPropagation();
+      STATE.scriptLang = seg.dataset.lang;
+      renderAll();
+    });
+  });
+}
+
+/* ---------------- render: hero ---------------- */
+function renderHero() {
+  const tab = activeTab();
+  document.getElementById("hero").innerHTML = `
+    <p class="eyebrow">${tab.hero.eyebrow}</p>
+    <h1>${tab.hero.title}</h1>
+    <p class="hero-lede">${tab.hero.lede}</p>
+  `;
+  document.getElementById("trailSub").textContent = tab.navLabel;
+}
+
+/* ---------------- render: sidebar nav ---------------- */
+function renderTrailNav() {
+  const tab = activeTab();
+  const el = document.getElementById("trailNav");
+
+  if (tab.kind === "reference") {
+    el.innerHTML = tab.data.map((item, i) => `
+      <a href="#${item.id}" class="trail-stop" data-camp="${item.id}">
+        <span class="trail-dot">${i + 1}</span>
+        <span class="trail-stop-label">
+          <span class="trail-stop-title">${item.titleEn}</span>
+          <span class="trail-stop-count">${item.subEn}</span>
+        </span>
+      </a>`).join("");
+    return;
+  }
+
+  const checked = STATE.checked[tab.id];
+  el.innerHTML = tab.data.map((camp, i) => {
+    const total = camp.items.length;
+    const done = camp.items.filter((_, idx) => checked.has(itemKey(camp.id, idx))).length;
+    const complete = done === total;
+    return `
+      <a href="#${camp.id}" class="trail-stop ${complete ? "complete" : ""}" data-camp="${camp.id}">
+        <span class="trail-dot">${complete ? "✓" : i + 1}</span>
+        <span class="trail-stop-label">
+          <span class="trail-stop-title">${camp.title}</span>
+          <span class="trail-stop-count">${camp.phaseLabel} · ${done}/${total}</span>
+        </span>
+      </a>`;
+  }).join("");
+}
+
+/* ---------------- render: camps + items ---------------- */
+function renderCamps() {
+  const tab = activeTab();
+  if (tab.kind === "reference") { renderSpiritualCards(tab); return; }
+  const checked = STATE.checked[tab.id];
+  const el = document.getElementById("camps");
+  el.innerHTML = tab.data.map((camp, i) => {
+    const total = camp.items.length;
+    const done = camp.items.filter((_, idx) => checked.has(itemKey(camp.id, idx))).length;
+    const pct = total ? Math.round((done / total) * 100) : 0;
+    const itemsHtml = camp.items.map((item, idx) => {
+      const key = itemKey(camp.id, idx);
+      const isChecked = checked.has(key);
+      return `
+        <div class="task ${isChecked ? "done" : ""}" data-key="${key}">
+          <span class="task-box"></span>
+          <div class="task-body">
+            <span class="task-text">${badgeHtml(item.type)}${item.text}</span>
+          </div>
+        </div>`;
+    }).join("");
+    return `
+      <section class="camp" id="${camp.id}">
+        <div class="camp-header">
+          <div class="camp-marker">${done === total ? "✓" : i + 1}</div>
+          <div class="camp-titles">
+            <p class="camp-phase-tag">${camp.phaseLabel}</p>
+            <h2>${camp.title}</h2>
+            <p class="camp-subtitle">${camp.subtitle}</p>
+          </div>
+          <div class="camp-progress">
+            <div class="camp-progress-count">${done}/${total}</div>
+            <div class="camp-progress-bar"><div class="camp-progress-fill" style="width:${pct}%"></div></div>
+          </div>
+        </div>
+        <div class="camp-items">${itemsHtml}</div>
+      </section>`;
+  }).join("");
+
+  el.querySelectorAll(".task").forEach((row) => {
+    row.addEventListener("click", () => toggleItem(row.dataset.key));
+  });
+}
+
+
+/* ---------------- render: spiritual cards (script toggle lives in the tab button) ---------------- */
+function renderSpiritualCards(tab) {
+  const el = document.getElementById("camps");
+  const lang = STATE.scriptLang;
+
+  const cardsHtml = tab.data.map((item, i) => `
+    <section class="camp mantra-card" id="${item.id}">
+      <div class="camp-header">
+        <div class="camp-marker">${i + 1}</div>
+        <div class="camp-titles">
+          <p class="camp-phase-tag">${item.subEn}</p>
+          <h2>${item.titleEn}</h2>
+        </div>
+      </div>
+      <pre class="mantra-text ${lang === "telugu" ? "lang-telugu" : "lang-devanagari"}">${item[lang]}</pre>
+    </section>`).join("");
+
+  el.innerHTML = `<div class="mantra-grid">${cardsHtml}</div>`;
+}
+
+/* ---------------- render: global progress bar ---------------- */
+function renderGlobalProgress() {
+  const tab = activeTab();
+  if (tab.kind === "reference") {
+    document.getElementById("globalProgressFill").style.width = "100%";
+    document.getElementById("globalProgressText").textContent =
+      `${tab.data.length} mantras · script: ${STATE.scriptLang === "telugu" ? "తెలుగు" : "देवनागरी"}`;
+    return;
+  }
+  const { done, total } = tabProgress(tab);
+  const pct = total ? Math.round((done / total) * 100) : 0;
+  document.getElementById("globalProgressFill").style.width = pct + "%";
+  document.getElementById("globalProgressText").textContent = `${done} / ${total} checkpoints · ${tab.navLabel}`;
+}
+
+/* ---------------- interactions ---------------- */
+function toggleItem(key) {
+  const tab = activeTab();
+  const checked = STATE.checked[tab.id];
+  if (checked.has(key)) checked.delete(key);
+  else checked.add(key);
+  saveChecked(tab.storageKey, checked);
+  renderAll();
+}
+
+function resetCurrentTrack() {
+  const tab = activeTab();
+  if (tab.kind === "reference") return;
+  if (!confirm(`Reset all progress on "${tab.navLabel}"? This can't be undone.`)) return;
+  STATE.checked[tab.id] = new Set();
+  saveChecked(tab.storageKey, STATE.checked[tab.id]);
+  renderAll();
+}
+
+function renderAll() {
+  renderTabSwitcher();
+  renderHero();
+  renderTrailNav();
+  renderCamps();
+  renderGlobalProgress();
+  const resetBtn = document.getElementById("resetBtn");
+  resetBtn.style.display = activeTab().kind === "reference" ? "none" : "";
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  document.getElementById("themeToggle").textContent = theme === "dark" ? "☀️" : "🌙";
+  localStorage.setItem("theme-v1", theme);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderAll();
+  document.getElementById("resetBtn").addEventListener("click", resetCurrentTrack);
+  applyTheme(localStorage.getItem("theme-v1") || "light");
+  document.getElementById("themeToggle").addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme");
+    applyTheme(current === "dark" ? "light" : "dark");
+  });
+});
